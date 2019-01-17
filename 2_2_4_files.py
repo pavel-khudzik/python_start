@@ -32,3 +32,20 @@ for current_dir, dirs, files in os.walk("."):
 
 """
 ##########################################
+import os
+
+os.chdir(r"d:\\- python")
+for current_dir, dirs, files in os.walk("."):
+    #print(current_dir, dirs, files)
+    if list(filter(lambda x: x.endswith('.py'), files)):
+        print(current_dir[2:].replace("\\", "/"))
+
+"""
+import os
+
+result = [cur_dir for cur_dir, dirs, files in os.walk("main") if any((fl.endswith(".py")
+    for fl in files))]
+
+with open("py_dirs.txt", "w") as w:
+    w.write("\n".join(sorted(result)))
+"""
