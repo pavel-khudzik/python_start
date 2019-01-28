@@ -62,9 +62,9 @@ print(all_inclusions)
 
 ### 4 ###
 string = "aa, aba, abba, abbba, abbbba"
-print(re.findall(r"ab?a", string))
-print(re.findall(r"ab+a", string))
-print(re.findall(r"ab*a", string))
+print(re.findall(r"ab?a", string))      # ['aa', 'aba']
+print(re.findall(r"ab+a", string))      # ['aba', 'abba', 'abbba', 'abbbba']
+print(re.findall(r"ab*a", string))      # ['aa', 'aba', 'abba', 'abbba', 'abbbba']
 print(re.findall(r"ab{3}a", string))
 print(re.findall(r"ab{2,4}a", string))
 
